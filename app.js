@@ -1,8 +1,7 @@
 // Netflick Application Logic
 
 // API Configuration
-const GROQ_API_KEY = localStorage.getItem('groq_api_key') || '';
-const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const API_URL = '/api/chat';
 
 // State
 let userProfile = {
@@ -43,27 +42,13 @@ function getMovie(id) {
 // ==========================================
 
 async function callGroqAPI(prompt, systemMsg = "You are an AI movie recommendation expert for a platform called Netflick.") {
-  if (!GROQ_API_KEY) {
-    showToast("⚠️ Please set your Groq API key in settings to use AI features.");
-    return "AI insights require a Groq API key. Please add it in your profile settings.";
-  }
-
   try {
-    const response = await fetch(GROQ_API_URL, {
+    const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${GROQ_API_KEY}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        model: "qwen-2.5-coder-32b", // Free tier model
-        messages: [
-          { role: "system", content: systemMsg },
-          { role: "user", content: prompt }
-        ],
-        temperature: 0.7,
-        max_tokens: 150
-      })
+      body: JSON.stringify({ prompt, systemMsg })
     });
 
     if (!response.ok) {
@@ -643,11 +628,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Settings / API Key prompt on avatar click
   document.getElementById('user-avatar-btn').addEventListener('click', () => {
-    const key = prompt("Enter Groq API Key to enable AI Features (Qwen model):", GROQ_API_KEY);
-    if (key !== null) {
-      localStorage.setItem('groq_api_key', key);
-      window.location.reload(); // Reload to pick up key
-    }
+    showToast("AI is connected securely via Vercel Backend! 🔒");
   });
   
   // Hero Buttons
