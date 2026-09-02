@@ -91,8 +91,7 @@ function renderMovieCard(movie, container, extraOverlay = '') {
   
   card.innerHTML = `
     <div class="card-poster">
-      <img src="${movie.poster}" alt="${movie.title}" class="poster-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      <div class="card-poster-emoji" style="display: ${!movie.poster || movie.poster.includes('null') ? 'flex' : 'none'};">🎬</div>
+      <img src="${movie.poster}" alt="${movie.title}" class="poster-image" onerror="this.closest('.movie-card').remove();" />
       <div class="card-rating">⭐ ${movie.rating}</div>
       <div class="card-overlay">
         <div class="overlay-play">
