@@ -481,8 +481,9 @@ img { display: block; max-width: 100%; }
 .card-poster {
   width: 100%;
   aspect-ratio: 2 / 3;
-  object-fit: cover;
   background: linear-gradient(135deg, #1a1a3e, #2d1b4e);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;

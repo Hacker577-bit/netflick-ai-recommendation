@@ -183,6 +183,7 @@ function updateHero() {
   if (movie.backdrop && !movie.backdrop.includes('null')) {
     heroSection.style.backgroundImage = `url('${movie.backdrop}')`;
     heroSection.style.backgroundSize = 'cover';
+    heroSection.style.backgroundPosition = 'center top';
   } else {
     heroSection.style.background = 'linear-gradient(135deg, #1a1a3e, #2d1b4e)';
   }
@@ -299,6 +300,7 @@ function openModal(movieId) {
   if (movie.backdrop && !movie.backdrop.includes('null')) {
     hero.style.backgroundImage = `url('${movie.backdrop}')`;
     hero.style.backgroundSize = 'cover';
+    hero.style.backgroundPosition = 'center top';
   } else {
     hero.style.background = 'linear-gradient(135deg, #1a1a3e, #2d1b4e)';
   }
