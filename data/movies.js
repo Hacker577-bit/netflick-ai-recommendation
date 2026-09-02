@@ -9,7 +9,7 @@ const moviesData = [
     description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
     rating: 8.8,
     duration: "2h 28m",
-    poster: "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQGNV5Pu6.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/8IB2e4R45Td2U39g0gC3pQc1x65.jpg",
     backdrop: "https://image.tmdb.org/t/p/w1280/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
     tags: ["mind-bending", "dreams", "heist", "subconscious"]
   },
@@ -135,7 +135,7 @@ const moviesData = [
     description: "In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos. Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor.",
     rating: 8.5,
     duration: "2h 35m",
-    poster: "https://image.tmdb.org/t/p/w500/ty8TGRuvEU11eEBRf1V1oPRQ8iI.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/ty8Gx2LQG14r5rJ83H6Jd649y8x.jpg",
     backdrop: "https://image.tmdb.org/t/p/w1280/hQ4pYsIbP22TMXOUdSfC2cbWonr.jpg",
     tags: ["ancient rome", "gladiator", "revenge", "epic"]
   },
